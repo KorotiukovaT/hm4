@@ -1,15 +1,15 @@
-# hm4
+# Homework 4
 
-## для запуску проекту потрібно активувати середовище venv
+Створити FastAPI додаток, який буде отимувати данні з NIST про CVE та виводити їх користувачеві.
 
-"""
-Можливі помилки
-PowerShell встановлена політика заборони запуску скриптів
-Вирішення:
+## Встановлення та запуск
 
-Тимчасова зміна політики виконання: (Діє лише на поточну сесію)
-- Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-"""
+Щоб налаштувати середовище для цього проекту, виконайте наступні кроки:
+```Bash 
 
-- env\Scripts\activate
-- uvicorn main:app --reload
+cd hm4/
+python3 -m venv env
+env\Scripts\activate
+pip install -r requirements.txt
+PYTHONPATH=src uvicorn src.main:app --reload  
+```
